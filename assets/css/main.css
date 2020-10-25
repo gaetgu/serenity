@@ -1,0 +1,198 @@
+/*
+Abandon all hope ye who enter
+(and want to understand what I did)
+ */
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh7USSwiPHA.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh6UVSwiPHA.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'PT Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: local('PT Mono'), local('PTMono-Regular'), url(https://fonts.gstatic.com/s/ptmono/v8/9oRONYoBnWILk-9AnC8zNg.ttf) format('truetype');
+}
+body {
+    background: #2E3440;
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+*:focus {
+    outline: none;
+}
+main {
+    min-height: 100vh;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+.wrapper {
+    min-height: 100%;
+
+    /* Equal to height of footer */
+    /* But also accounting for potential margin-bottom of last child */
+    margin-bottom: 0px;
+}
+.card-footer,
+.push {
+    height: 50px;
+}
+.title {
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    font-size: 2.8em;
+    margin-top: 1.5em;
+}
+.title small {
+    display: block;
+    font-size: 0.6em;
+    margin-top: 0.4em;
+}
+.window {
+    width: 100%;
+    background: GhostWhite;
+    border-radius: 0.3rem;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.window .window-header {
+    height: 37px;
+    background: Gainsboro;
+    position: relative;
+}
+.window .window-header .language {
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    margin-top: -10px;
+    height: 21px;
+    padding: 0 1em;
+    text-align: right;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: transparent;
+    font-family: Lato, sans-serif;
+    color: DimGrey;
+}
+#save {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -10px;
+    height: 21px;
+    padding: 0 1em;
+    text-align: right;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: transparent;
+    font-family: Lato, sans-serif;
+    color: DimGrey;
+}
+.window .window-header .language:before {
+    content: 'asd';
+}
+.window .window-body {
+    position: relative;
+    height: 575px;
+}
+.window .window-body .code-input,
+.window .window-body .code-output {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border: none;
+    font-family: 'PT Mono', monospace;
+    font-size: 0.8rem;
+    background: transparent;
+    white-space: pre-wrap;
+    line-height: 1.5em;
+    word-wrap: break-word;
+}
+.window .window-body .code-input {
+    opacity: 0.7;
+    margin: 0;
+    color: #999;
+    resize: none;
+}
+.window .window-body .code-output {
+    pointer-events: none;
+    z-index: 3;
+    margin: 0;
+    overflow-y: auto;
+}
+.window .window-body .code-output code {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 1rem;
+    display: block;
+    color: #666;
+    font-size: 0.8rem;
+    font-family: 'PT Mono', monospace;
+}
+a.token {
+    text-decoration: none;
+}
+.token.selector,
+.token.punctuation,
+.token.keyword {
+    color: #5E81AC;
+}
+.token.property,
+.token.number,
+.token.string,
+.token.punctuation,
+.token.tag-id {
+    color: #8FBCBB;
+}
+.token.function,
+.token.attr-name {
+    color: CadetBlue;
+}
+.token.atrule .atrule-id {
+    color: BlueViolet;
+}
+.token.boolean {
+    color: #81A1C1;
+}
+.token.comment {
+    color: #3B4252;
+}
+.language-php .variable {
+    color: CadetBlue;
+}
