@@ -3,33 +3,18 @@ Abandon all hope ye who enter
 (and want to understand what I did)
  */
 
-@font-face {
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 300;
-    src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh7USSwiPHA.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Lato';
-    font-style: normal;
+@font-face{
+    font-family: 'JetBrainsMono';
+    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Bold.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Bold.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/ttf/JetBrainsMono-Bold.ttf') format('truetype');
     font-weight: 400;
-    src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Lato';
     font-style: normal;
-    font-weight: 700;
-    src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh6UVSwiPHA.ttf) format('truetype');
 }
-@font-face {
-    font-family: 'PT Mono';
-    font-style: normal;
-    font-weight: 400;
-    src: local('PT Mono'), local('PTMono-Regular'), url(https://fonts.gstatic.com/s/ptmono/v8/9oRONYoBnWILk-9AnC8zNg.ttf) format('truetype');
-}
+
 body {
     background: #2E3440;
-    font-family: Lato, sans-serif;
+    font-family: JetBrainsMono, sans-serif;
     font-size: 15px;
     margin-left: 40px;
     margin-right: 40px;
@@ -61,6 +46,8 @@ main {
 .card-footer,
 .push {
     height: 50px;
+    background: #10141a;
+    color: #a4abb3;
 }
 .title {
     color: #fff;
@@ -77,7 +64,7 @@ main {
 }
 .window {
     width: 100%;
-    background: GhostWhite;
+    background: #161b22;
     border-radius: 0.3rem;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -100,7 +87,7 @@ main {
     appearance: none;
     border: none;
     background: transparent;
-    font-family: Lato, sans-serif;
+    font-family: JetBrainsMono, sans-serif;
     color: DimGrey;
 }
 #save {
@@ -116,7 +103,7 @@ main {
     appearance: none;
     border: none;
     background: transparent;
-    font-family: Lato, sans-serif;
+    font-family: JetBrainsMono, sans-serif;
     color: DimGrey;
 }
 .window .window-header .language:before {
@@ -145,7 +132,7 @@ main {
 .window .window-body .code-input {
     opacity: 0.7;
     margin: 0;
-    color: #999;
+    color: #c9d1d9;
     resize: none;
 }
 .window .window-body .code-output {
@@ -161,7 +148,7 @@ main {
     margin: 0;
     padding: 1rem;
     display: block;
-    color: #666;
+    color: #c9d1d9;
     font-size: 0.8rem;
     font-family: 'PT Mono', monospace;
 }
@@ -171,27 +158,27 @@ a.token {
 .token.selector,
 .token.punctuation,
 .token.keyword {
-    color: #5E81AC;
+    color: #f4766e;
 }
 .token.property,
 .token.number,
 .token.string,
 .token.punctuation,
 .token.tag-id {
-    color: #8FBCBB;
+    color: #87afd1;
 }
 .token.function,
 .token.attr-name {
-    color: CadetBlue;
+    color: #caa2f6;
 }
 .token.atrule .atrule-id {
-    color: BlueViolet;
+    color: red;
 }
 .token.boolean {
     color: #81A1C1;
 }
 .token.comment {
-    color: #3B4252;
+    color: #7d868f;
 }
 .language-php .variable {
     color: CadetBlue;

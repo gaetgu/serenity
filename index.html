@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
-    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <style>
 
     </style>
@@ -17,24 +16,11 @@
 
 <body>
 
-<!--<div class="wrapper">-->
-<!--    <div class="container">-->
-<!--        <h1 class="text-center">Serenity Editor<br></h1>-->
-<!--    </div>-->
-<!--    <textarea id="editor" class="code-input" placeholder="This is the text editor! Start typing to make this disappear."></textarea>-->
-<!--</div>-->
-
 <div class="window">
     <div class="window-header">
-        <button id="save" onclick="saveTextAsFile()">Save</button>
-        <select class="language">
-            <option value="javascript" selected>JavaScript</option>
-            <option value="markup">HTML</option>
-            <option value="php">PHP</option>
-        </select>
     </div>
     <div class="window-body">
-        <textarea class="code-input" placeholder="// The Serenity text editor, Copyright (c) Gabriel Gutierrez, 2020"></textarea>
+        <textarea class="code-input" spellcheck="false" placeholder="// The Serenity text editor, Copyright (c) Gabriel Gutierrez, 2020"></textarea>
         <pre class="code-output">
             <code class="language-javascript">
 
@@ -44,11 +30,18 @@
 </div>
 
 <!--<div id="counter" class="card-body"></div>-->
-<div class="card-footer">
+<div class="card-footer" style="margin-top: -12px;">
     <small>LOC: <span id="count"></span></small>
+    <button style="float: right; background: #161b22; color: #a9b0d2; border:0px; outline:0px;" onclick="saveTextAsFile()">Save</button>
+    <select style="float: right; background: #161b22; color: #a9b0d2; border:0px; outline:0px; height: 23px; -moz-appearance: none; -moz-appearance: none;">
+        <option value="javascript" selected>JavaScript        </option>
+<!--        <option value="markup">HTML        </option>-->
+<!--        <option value="php">PHP        </option>-->
+    </select>
 </div>
 
-<script src="js/script.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js'></script>
+<script src="js/script.js"></script>
 </body>
 </html>
